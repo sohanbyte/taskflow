@@ -1,0 +1,75 @@
+.overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(4px);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 100; padding: 16px;
+  animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.modal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  width: 100%; max-width: 480px;
+  padding: 32px;
+  animation: slideUp 0.2s cubic-bezier(0.16,1,0.3,1);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modalHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.modalTitle { font-family: var(--font-head); font-size: 22px; font-weight: 700; }
+.closeBtn {
+  background: none; border: none; color: var(--muted);
+  cursor: pointer; font-size: 16px; padding: 4px 8px;
+  border-radius: 6px; transition: color 0.2s;
+}
+.closeBtn:hover { color: var(--text); }
+
+.error {
+  background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3);
+  color: #f87171; padding: 10px 14px; border-radius: 8px;
+  font-size: 14px; margin-bottom: 16px;
+}
+
+.form { display: flex; flex-direction: column; gap: 16px; }
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label { font-size: 13px; font-weight: 500; color: var(--muted); }
+
+.field input, .field textarea, .field select {
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 10px; padding: 11px 14px;
+  color: var(--text); font-size: 14px; outline: none;
+  transition: border-color 0.2s; resize: none;
+}
+.field input:focus, .field textarea:focus, .field select:focus { border-color: var(--accent); }
+.field input::placeholder, .field textarea::placeholder { color: var(--muted); }
+.field select option { background: var(--surface2); }
+
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.modalFooter { display: flex; gap: 10px; justify-content: flex-end; margin-top: 8px; }
+
+.cancelBtn {
+  background: transparent; border: 1px solid var(--border);
+  color: var(--muted); padding: 10px 20px; border-radius: 10px;
+  cursor: pointer; font-size: 14px; transition: all 0.2s;
+}
+.cancelBtn:hover { border-color: var(--text); color: var(--text); }
+
+.saveBtn {
+  background: linear-gradient(135deg, var(--accent), #857bff);
+  color: #fff; border: none; border-radius: 10px;
+  padding: 10px 22px; font-size: 14px; font-weight: 600;
+  cursor: pointer; font-family: var(--font-head);
+  transition: opacity 0.2s;
+}
+.saveBtn:hover { opacity: 0.9; }
+.saveBtn:disabled { opacity: 0.5; cursor: not-allowed; }
