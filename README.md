@@ -1,6 +1,7 @@
 # TaskFlow — Full Stack Task Manager
 
-A production-ready MERN stack application with JWT authentication and a Kanban-style task board.
+A full-stack task management app I built as part of an internship assignment.
+It uses the MERN stack with JWT authentication and a Kanban-style task board.
 
 **Live Demo:** https://taskflow-alpha-two.vercel.app  
 **Backend API:** https://taskflow-server-ove3.onrender.com
@@ -34,7 +35,7 @@ A production-ready MERN stack application with JWT authentication and a Kanban-s
 
 ### Prerequisites
 - Node.js 18+
-- MongoDB Atlas account (free tier works)
+- MongoDB Atlas account 
 
 ### 1. Clone the repo
 ```bash
@@ -129,4 +130,4 @@ taskflow/
 
 ## Author
 
-Built by **[Your Name]** — MCA Final Year Project
+Built by **SOHAN KUMAR BEHERA** — TaskFlow Assignment
