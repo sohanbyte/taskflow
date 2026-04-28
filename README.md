@@ -2,9 +2,8 @@
 
 A production-ready MERN stack application with JWT authentication and a Kanban-style task board.
 
-**Live Demo:** `<your-vercel-link>`  
-**Backend API:** `<your-render-link>`
-
+**Live Demo:** https://taskflow-alpha-two.vercel.app  
+**Backend API:** https://taskflow-server-ove3.onrender.com
 ---
 
 ## Tech Stack
